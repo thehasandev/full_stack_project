@@ -1,4 +1,7 @@
 const express = require('express')
+const dbConfiger = require('./dbConfig/dbConfiger')
+
+dbConfiger()
 const app = express()
 const cors = require('cors')
 
