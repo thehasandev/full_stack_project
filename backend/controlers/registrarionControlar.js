@@ -16,9 +16,6 @@ async function registrarionControlar(req,res){
     data.save()
     res.send({"sucess":"ragestration sucess"})
     }
-
 }
-
-
 
 module.exports = {registrarionControlar}

@@ -6,7 +6,33 @@ h1,p{
     width: 1370px;
     margin: 0 auto;
 }
-.singup_box{
-    width: 600px;
-    margin: 0 auto;
+.singup h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 46px;
+    color: #111111;
+    font-weight: 600;
+}
+.singup p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #111111;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.singup .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+  
+}
+.singup .box .part_one{
+    width: 500px;
+
+}
+.singup .box .part_two{
+    width: 400px; 
+}
+.singup .box .part_two img{
+    width: 100% 
 }
