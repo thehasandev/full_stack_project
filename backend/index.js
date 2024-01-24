@@ -11,7 +11,7 @@ dbConfiger()
 app.use(express.json())
 app.use(cors())
 
-app.post('/create', registrarionControlar)
+app.post('/create',registrarionControlar)
 
 
 app.listen(8000,()=>{
