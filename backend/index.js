@@ -2,6 +2,7 @@ const express = require('express')
 const dbConfiger = require('./dbConfig/dbConfiger')
 const cors = require('cors')
 const app = express()
+const routes = require("./routes")
 
 const { registrarionControlar } = require('./controlers/aouthControllers')
 
@@ -12,7 +13,7 @@ app.use(cors())
 
 dbConfiger()
 
-app.post('/create',registrarionControlar)
+app.use(routes)
 
 
 app.listen(8000,()=>{

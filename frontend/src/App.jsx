@@ -12,7 +12,7 @@ function App() {
    
     const { username, useremail, password } = values
 
-    let data = await axios.post("http://localhost:8000/create", {
+    let data = await axios.post("http://localhost:8000/api/v1/aouthRoutes/ragestration", {
       userName: username,
       userEmail: useremail,
       userPassword: password
