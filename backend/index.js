@@ -1,15 +1,16 @@
 const express = require('express')
 const dbConfiger = require('./dbConfig/dbConfiger')
-
-const app = express()
 const cors = require('cors')
-const { registrarionControlar } = require('./controlers/registrarionControlar')
+const app = express()
 
-dbConfiger()
+const { registrarionControlar } = require('./controlers/aouthControllers')
+
 
 //Middleware
 app.use(express.json())
 app.use(cors())
+
+dbConfiger()
 
 app.post('/create',registrarionControlar)
 

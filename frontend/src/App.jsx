@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import axios from "axios"
 import singUpImg from "./assets/login_img.jpg"
 import { Button, Checkbox, Form, Input } from 'antd';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 function App() {
-  const [emailError, setEmailError] = useState("")
-  const [sucess, setSucess] = useState("")
   const onFinish = async (values) => {
+   
     const { username, useremail, password } = values
 
     let data = await axios.post("http://localhost:8000/create", {
@@ -16,8 +17,12 @@ function App() {
       userEmail: useremail,
       userPassword: password
     })
- 
-  };
+
+toast.error(data.data.errorEmail)
+toast.success(data.data.sucess)
+
+};
+
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
@@ -79,7 +84,7 @@ function App() {
 
 
               <Form.Item>
-                <Button type="primary" htmlType="submit" >
+                <Button  type="primary" htmlType="submit" block>
                   Sing Up
                 </Button>
 
@@ -93,6 +98,18 @@ function App() {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        />
     </section>
   )
 }
