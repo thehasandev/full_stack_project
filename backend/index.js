@@ -4,9 +4,6 @@ const cors = require('cors')
 const app = express()
 const routes = require("./routes")
 
-const { registrarionControlar } = require('./controlers/aouthControllers')
-
-
 //Middleware
 app.use(express.json())
 app.use(cors())

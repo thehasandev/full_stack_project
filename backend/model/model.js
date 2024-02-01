@@ -10,4 +10,4 @@ const modeSchema = new Schema({
     userPassword: String
 })
 
-module.exports = mongoose.model("items",modeSchema)
+module.exports = mongoose.model("Item",modeSchema)

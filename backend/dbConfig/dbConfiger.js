@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 
 const dbConfiger =()=>{
 
-mongoose.connect('mongodb+srv://Hasan:aUiWkt200HTHMIND@cluster0.px58yxr.mongodb.net/data?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://Hasan:0z7GbJ04BtOgHOjl@cluster0.px58yxr.mongodb.net/ecommerce?retryWrites=true&w=majority')
   .then(() => console.log('Connected!'));
 }
 
 module.exports = dbConfiger
-// 
+// 0z7GbJ04BtOgHOjl

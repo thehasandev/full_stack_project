@@ -5,7 +5,7 @@ const {nodemailser} = require("../helpers/nodemailer");
 async function registrarionControlar(req,res){
     const {userName,userEmail,userPassword} = req.body
     const exjectionUser = await Model.find({userEmail:userEmail})
- 
+    
     if(exjectionUser.length>0){
      res.send({"errorEmail":"This email is already used"})
     }else{
