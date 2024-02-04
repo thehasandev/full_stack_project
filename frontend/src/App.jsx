@@ -12,14 +12,16 @@ function App() {
    
     const { username, useremail, password } = values
 
-    let data = await axios.post("http://localhost:8000/api/v1/aouthRoutes/ragestration", {
+    let data = await axios.post("http://localhost:8000/api/v1/aouth/ragestration", {
       userName: username,
       userEmail: useremail,
       userPassword: password
     })
 
+
 toast.error(data.data.errorEmail)
 toast.success(data.data.sucess)
+toast.error(data.data)
 
 };
 
