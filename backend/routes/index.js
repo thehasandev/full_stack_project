@@ -3,7 +3,8 @@ const route = express.Router()
 const apiRoutes = require("./api")
 
 //This is Base Url
-const api = "/api/v1"
+const api = process.env.BASE_URL
+
 route.use(api,apiRoutes)
 
 route.use(api,(req,res)=>res.send("Api is not found"))

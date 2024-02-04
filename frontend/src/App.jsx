@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const onFinish = async (values) => {
-   
+
     const { username, useremail, password } = values
 
     let data = await axios.post("http://localhost:8000/api/v1/aouth/ragestration", {
@@ -19,12 +19,12 @@ function App() {
     })
 
 
-toast.error(data.data.errorEmail)
-toast.success(data.data.sucess)
-toast.error(data.data.emailvalid)
-toast.error(data.data.passvalidation)
+    toast.error(data.data.errorEmail)
+    toast.success(data.data.sucess)
+    toast.error(data.data.emailvalid)
+    toast.error(data.data.passvalidation)
 
-};
+  };
 
 
   const onFinishFailed = (errorInfo) => {
@@ -35,7 +35,7 @@ toast.error(data.data.passvalidation)
       <div className='contianer'>
         <div className="box">
           <div className='part_one'>
-          <h1 style={{textAlign:"center",marginBottom:"20px"}}>Sing Up</h1>
+            <h1 style={{ textAlign: "center", marginBottom: "20px" }}>Sing Up</h1>
             <Form
               name="basic"
               initialValues={{
@@ -56,7 +56,7 @@ toast.error(data.data.passvalidation)
                   },
                 ]}
               >
-                <Input placeholder='Enter Your User Name'/>
+                <Input placeholder='Enter Your User Name' />
               </Form.Item>
 
               <p>Email*</p>
@@ -69,7 +69,7 @@ toast.error(data.data.passvalidation)
                   },
                 ]}
               >
-                <Input placeholder='Enter Your Email'/>
+                <Input placeholder='Enter Your Email' />
               </Form.Item>
 
               <p>Password</p>
@@ -82,21 +82,21 @@ toast.error(data.data.passvalidation)
                   },
                 ]}
               >
-                <Input.Password placeholder='Enter Your Password'/>
-              </Form.Item><br/>
+                <Input.Password placeholder='Enter Your Password' />
+              </Form.Item><br />
 
 
               <Form.Item>
-                <Button  type="primary" htmlType="submit" block>
+                <Button type="primary" htmlType="submit" block>
                   Sing Up
                 </Button>
 
               </Form.Item>
             </Form>
-          
+
           </div>
           <div className='part_two'>
-          <img src={singUpImg} alt="" />
+            <img src={singUpImg} alt="" />
 
           </div>
         </div>
@@ -112,7 +112,7 @@ toast.error(data.data.passvalidation)
         draggable
         pauseOnHover
         theme="dark"
-        />
+      />
     </section>
   )
 }
