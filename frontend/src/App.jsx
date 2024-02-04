@@ -21,7 +21,8 @@ function App() {
 
 toast.error(data.data.errorEmail)
 toast.success(data.data.sucess)
-toast.error(data.data)
+toast.error(data.data.emailvalid)
+toast.error(data.data.passvalidation)
 
 };
 
